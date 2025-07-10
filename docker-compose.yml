@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  openwebui:
+    image: ghcr.io/open-webui/open-webui:main
+    ports:
+      - "3000:3000"
+    environment:
+      LLM_TOOL_CONFIG: >
+        [
+          {
+            "id": "retirement-sim",
+            "name": "Retirement Simulator",
+            "description": "Run Monte Carlo retirement simulations.",
+            "url": "http://host.docker.internal:5000/simulate",
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "input_parameters": [
+              { "name": "age", "type": "number" },
+              { "name": "retirement_age", "type": "number" },
+              { "name": "savings", "type": "number" },
+              { "name": "income", "type": "number" },
+              { "name": "monthly_expense", "type": "number" }
+            ]
+          }
+        ]

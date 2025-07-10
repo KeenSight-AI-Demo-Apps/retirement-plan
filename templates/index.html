@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Retirement Advisor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f7f7f7;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        input {
+            margin: 5px 0;
+            padding: 8px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #0066cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .result {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Retirement Planning Simulator</h1>
+    <form method="POST">
+        <label>Current Age:</label><br>
+        <input type="number" name="age" required><br>
+        <label>Retirement Age:</label><br>
+        <input type="number" name="retirement_age" required><br>
+        <label>Savings (₹):</label><br>
+        <input type="number" name="savings" required><br>
+        <label>Annual Income (₹):</label><br>
+        <input type="number" name="income" required><br>
+        <label>Monthly Expense (₹):</label><br>
+        <input type="number" name="monthly_expense" required><br><br>
+        <button type="submit">Simulate</button>
+    </form>
+
+    <!-- {% if error %}
+    <div class="result"><strong>Error:</strong> {{ error }}</div>
+    {% endif %}
+
+    {% if success_rate %}
+    <div class="result">
+        <h2>Success Rate: {{ success_rate }}%</h2>
+        <h3>Summary:</h3>
+        <p>{{ summary }}</p>
+    </div>
+    {% endif %}
+
+    {% if chart %}
+    <div class="result">
+        <h3>Simulation Chart</h3>
+        {{ chart | safe }}
+    </div>
+    {% endif %} -->
+</body>
+
+</html>

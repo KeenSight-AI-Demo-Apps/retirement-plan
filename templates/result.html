@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retirement Results</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f7f7f7; }
+        .result { background: white; padding: 20px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <div class="result">
+        <h2>Success Rate: {{ success_rate }}%</h2>
+        <h3>Summary:</h3>
+        <p>{{ summary }}</p>
+
+        <h3>Chart:</h3>
+        {{ chart | safe }}
+
+        <br><a href="{{ url_for('home') }}">🔙 Back to input</a>
+    </div>
+</body>
+</html>
